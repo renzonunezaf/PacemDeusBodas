@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pacem Deus Bodas</string>
+    <string name="google_maps_key">YOUR_GOOGLE_MAPS_KEY</string>
+</resources>

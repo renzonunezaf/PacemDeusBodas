@@ -1,0 +1,85 @@
+# ═══════════════════════════════════════════════════════════════
+# Pacem Deus Bodas — Reglas de exclusión del repositorio
+# ═══════════════════════════════════════════════════════════════
+
+# ─── Variables de entorno y secretos ───────────────────────────
+# CRÍTICO: nunca se suben credenciales al repositorio.
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ─── Python (backend) ──────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ─── Android / Gradle ──────────────────────────────────────────
+# Archivos de compilación — se regeneran al compilar.
+PacemDeusBodas/.gradle/
+PacemDeusBodas/build/
+PacemDeusBodas/app/build/
+PacemDeusBodas/captures/
+PacemDeusBodas/.externalNativeBuild/
+PacemDeusBodas/.cxx/
+
+# local.properties contiene la ruta absoluta del SDK (distinta en cada máquina).
+PacemDeusBodas/local.properties
+
+# Artefactos de compilación.
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+
+# Firmas (si en el futuro se usan).
+*.jks
+*.keystore
+
+# ─── IDE: Android Studio / IntelliJ ────────────────────────────
+.idea/
+*.iml
+*.ipr
+*.iws
+.navigation/
+
+# ─── IDE: Visual Studio Code ───────────────────────────────────
+.vscode/
+
+# ─── Sistemas operativos ───────────────────────────────────────
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.fuse_hidden*
+
+# ─── Logs y temporales ─────────────────────────────────────────
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# ─── Archivos del proyecto que no deben versionarse ────────────
+# ZIPs de entregas antiguas (se guardaban localmente durante desarrollo).
+*.zip
