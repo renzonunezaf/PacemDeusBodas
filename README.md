@@ -103,4 +103,4 @@ Todos los usuarios comparten la contraseña: `PacemDeus2026!`
 
 **Backend** — Python con estructura Lambda (handlers en `functions/`, utilidades compartidas en `shared/`). En desarrollo local se simula API Gateway con Flask vía `server.py`. Base de datos PostgreSQL con 12 tablas.
 
-Actualización de prueba #HUCH
+Ajuste de conf. pantallas #HUCH
