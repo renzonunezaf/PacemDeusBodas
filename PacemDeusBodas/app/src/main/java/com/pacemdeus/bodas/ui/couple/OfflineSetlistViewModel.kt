@@ -1,6 +1,8 @@
-class OfflineSetlistViewModel : ViewModel() {
+class OfflineSetlistViewModel(
+    private val db: AppDatabase
+) : ViewModel() {
 
-    var songs by mutableStateOf<List<SetlistSong>>(emptyList())
+    var songs by mutableStateOf<List<SetlistEntity>>(emptyList())
 
     fun downloadSetlist(weddingId: Int) {
 
@@ -9,11 +11,27 @@ class OfflineSetlistViewModel : ViewModel() {
             try {
 
                 val response =
-                    ApiClient.apiService.getOfflineSetlist(weddingId)
+                    ApiClient.apiService
+                        .getOfflineSetlist(weddingId)
 
-                songs = response.items
+                val entities =
+                    response.items.map {
+
+                        SetlistEntity(
+                            id = it.id,
+                            title = it.title,
+                            author = it.author,
+                            moment_name = it.moment_name
+                        )
+                    }
+
+                db.setlistDao().insertAll(entities)
+
+                songs = db.setlistDao().getAll()
 
             } catch (e: Exception) {
+
+                songs = db.setlistDao().getAll()
 
             }
         }
