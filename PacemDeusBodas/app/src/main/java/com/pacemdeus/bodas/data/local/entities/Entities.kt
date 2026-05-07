@@ -36,3 +36,14 @@ data class CachedSetlistItem(
     val momentOrder: Int,
     val displayOrder: Int
 )
+
+/** Offline_Setlist**/
+
+@Entity(tableName = "offline_setlist")
+data class SetlistEntity(
+    @PrimaryKey
+    val id: Int,
+    val title: String,
+    val author: String,
+    val moment_name: String
+)
