@@ -23,6 +23,13 @@ import com.pacemdeus.bodas.data.local.entities.CachedSetlistItem
     version = 1,
     exportSchema = false
 )
+
+@Database(
+    entities = [
+        SetlistEntity::class
+    ],
+    version = 1
+)
 abstract class AppDatabase : RoomDatabase() {
 
     /** DAO para momentos litúrgicos */
