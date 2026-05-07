@@ -1,8 +1,30 @@
-LazyColumn {
+@Composable
+fun CoupleNotificationsScreen() {
 
-    items(notifications) { notification ->
+    var notifications by remember {
+        mutableStateOf<List<NotificationItem>>(emptyList())
+    }
 
-        NotificationCard(notification)
+    LaunchedEffect(Unit) {
 
+        try {
+
+            notifications =
+                ApiClient.apiService.getNotifications()
+
+        } catch (e: Exception) {
+
+            e.printStackTrace()
+
+        }
+    }
+
+    LazyColumn {
+
+        items(notifications) { item ->
+
+            NotificationCard(item)
+
+        }
     }
 }
