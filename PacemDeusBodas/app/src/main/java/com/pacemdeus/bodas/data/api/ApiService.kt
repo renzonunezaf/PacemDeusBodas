@@ -139,4 +139,13 @@ interface ApiService {
     /** Obtener eventos asignados al planner autenticado. */
     @GET("planner/weddings")
     suspend fun getPlannerWeddings(): Response<List<Wedding>>
+    // ─── Notificaciones ───────────────────────────────────
+
+    @GET("notifications")
+suspend fun getNotifications(): List<NotificationItem>
+
+@GET("weddings/{id}/offline-setlist")
+suspend fun getOfflineSetlist(
+    @Path("id") weddingId: Int
+): OfflineSetlistResponse
 }
