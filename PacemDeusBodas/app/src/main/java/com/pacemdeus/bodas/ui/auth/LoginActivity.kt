@@ -113,7 +113,8 @@ fun LoginScreen(onLoginSuccess: (String) -> Unit, onRegister: () -> Unit, showEr
                         showError("Error de conexión")
                     } finally { loading = false }
                 }
-            })
+            }
+          )
         }
 
         Spacer(Modifier.height(20.dp))
