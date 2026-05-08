@@ -183,7 +183,8 @@ fun RegisterScreen(onSuccess: (String) -> Unit, onBack: () -> Unit, showError: (
                 Text(
                     "Iniciar sesión",
                     fontSize = 14.sp, color = Gold,
-                    modifier = Modifier.clickable { onBack() }
+                    modifier = Modifier.clickable { onBack() 
+                    }
                 )
             }
         }
