@@ -393,6 +393,9 @@ private fun languageName(code: String): String = when (code) {
     else   -> code
 }
 
+
+// Mejora en renderizado de timeline musical
+
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
 private fun AssemblyScreenPreview() {
