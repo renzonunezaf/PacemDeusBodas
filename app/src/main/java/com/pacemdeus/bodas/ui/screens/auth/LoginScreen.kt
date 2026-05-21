@@ -139,6 +139,7 @@ fun LoginScreen(
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
                 colors = goldTextFieldColors()
             )
+            
             Spacer(Modifier.height(12.dp))
 
             OutlinedTextField(
