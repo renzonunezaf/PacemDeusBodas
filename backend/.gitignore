@@ -1,0 +1,64 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+*.egg
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# Lambda packaging
+dist/
+*.zip
+build/
+_staging_shared_layer/
+
+# AWS/Local config
+.aws-sam/
+samconfig.toml
+local-environment.json
+.aws/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets — NUNCA commitear
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.txt
+credenciales.txt
+secrets.json
+.env
+.env.local
+*service-account*.json
+*-credentials.json
+firebase-adminsdk*.json
+
+# Inventarios crudos (pueden contener env vars)
+inventario_consolidado_*.txt
+inventario_*.txt
+diagnostico_*.txt
+
+# Logs locales
+*.log
+logs/
+
+# Backups locales
+*_BACKUP_*
+backup_*

@@ -1,0 +1,6 @@
+# Dependencias para la layer 'shared' (instaladas via package_layer.ps1)
+bcrypt==4.2.1
+PyJWT==2.10.1
+
+# pyodbc va en la layer separada 'pyodbc313' que provee el profesor
+# (no se instala con pip, viene pre-compilada para Linux x86_64)

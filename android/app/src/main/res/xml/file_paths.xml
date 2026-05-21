@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Define los directorios que el FileProvider puede compartir con otras
+    apps. Necesitamos cuatro paths:
+
+    - fotos_locales/ (files-path): donde CameraX del admin guarda fotos
+      con el contrato CameraScreen (HU-03 admin).
+    - photos/ (cache-path): donde la GalleryScreen de la novia hace los
+      captures temporales via ActivityResultContracts.TakePicture.
+    - contratos/ (cache-path): donde se guarda el PDF del contrato
+      descargado para compartirlo via Intent.ACTION_SEND (HU-08).
+    - setlists/ (cache-path): igual que contratos/ pero para el PDF
+      del setlist compartido por la novia.
+-->
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <files-path
+        name="fotos_locales"
+        path="fotos_locales/" />
+    <cache-path
+        name="photos_temp"
+        path="photos/" />
+    <cache-path
+        name="contratos_pdf"
+        path="contratos/" />
+    <cache-path
+        name="setlists_pdf"
+        path="setlists/" />
+</paths>

@@ -1,0 +1,36 @@
+﻿# Pacem Deus Bodas — Backend
+# https://pre-commit.com/
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+      - id: check-merge-conflict
+      - id: check-added-large-files
+        args: ['--maxkb=1000']
+      - id: detect-private-key
+
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.21.2
+    hooks:
+      - id: gitleaks
+
+  - repo: local
+    hooks:
+      - id: validate-sql-go
+        name: Validar GO antes de CREATE/ALTER PROC
+        entry: powershell -ExecutionPolicy Bypass -File scripts/hooks/validate_sql_go.ps1
+        language: system
+        files: \.sql$
+        pass_filenames: true
+
+      - id: validate-lambda-naming
+        name: Validar naming Lambda
+        entry: powershell -ExecutionPolicy Bypass -File scripts/hooks/validate_lambda_naming.ps1
+        language: system
+        files: ^lambdas/.*\.py$
+        pass_filenames: true

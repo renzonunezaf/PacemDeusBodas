@@ -1,0 +1,25 @@
+<!--
+  Icono pequeno para la barra de status en notificaciones push.
+
+  Android 5+ pinta este drawable como silueta blanca sobre transparente
+  (cualquier color que se ponga aqui se reemplaza). Por eso usamos
+  fillColor blanco y diseno basado en silueta solida.
+
+  El icono es una iglesia con cruz en el techo. La iglesia toma el
+  path estandar de Material Symbols (church) y la cruz se dibuja
+  arriba del pico del techo (que esta en x=12, y=3.3).
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Iglesia: techo en pico + paredes laterales con torre central -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M18,12.22V9l-6-5.7L6,9v3.22L4,13v9h6v-6h4v6h6v-9l-2-0.78z"/>
+    <!-- Cruz encima del pico de la iglesia -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M11.5,0h1v1h1.5v1h-1.5v1.5h-1v-1.5h-1.5v-1h1.5z"/>
+</vector>

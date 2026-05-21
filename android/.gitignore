@@ -1,0 +1,44 @@
+﻿# Android
+*.iml
+.gradle/
+local.properties
+.idea/
+.DS_Store
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+*.dex
+
+# Kotlin
+.kotlin/
+
+# IDE
+.vscode/
+
+# OS
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Firebase — NUNCA commitear
+google-services.json
+firebase-service-account.json
+
+# Keystore — NUNCA commitear
+*.jks
+*.keystore
+keystore.properties
+
+# Backups locales
+*_BACKUP_*
+backup_*
+
+# Inventarios (pueden tener secrets)
+inventario_*.txt
+diagnostico_*.txt
